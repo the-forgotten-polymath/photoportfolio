@@ -85,69 +85,69 @@ export default function Testimonials() {
       {/* Marquee Section */}
       <div className="relative w-full overflow-hidden flex flex-col gap-6 py-4">
         
-        {/* Top Row: Left to Right */}
-        <div className="flex w-[200%] sm:w-[300%] md:w-[400%] lg:w-[400%]">
+        {/* Top Row: Left to Right (Rightwards slide) */}
+        <div className="flex w-max flex-nowrap">
           <motion.div 
-            className="flex gap-6 shrink-0 w-1/2 pr-6"
+            className="flex gap-6 shrink-0 pr-6"
             animate={{ x: ["-100%", 0] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 60 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 35 }}
           >
-            {topRowDuplicated.map((t, i) => (
-              <div key={`top-${i}`} className="w-[300px] md:w-[400px] shrink-0 bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-colors cursor-grab">
-                <p className="font-body text-white/90 leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
+            {topRow.map((t, i) => (
+              <div key={`top-${i}`} className="w-[280px] md:w-[380px] shrink-0 bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-colors">
+                <p className="font-body text-white/90 text-sm md:text-base leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
                 <div>
-                  <div className="font-semibold text-primary">{t.name}</div>
-                  <div className="text-xs text-white/50 uppercase tracking-widest mt-1">{t.role}</div>
+                  <div className="font-semibold text-primary text-sm md:text-base">{t.name}</div>
+                  <div className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest mt-1">{t.role}</div>
                 </div>
               </div>
             ))}
           </motion.div>
           {/* Duplicate for seamless loop */}
           <motion.div 
-            className="flex gap-6 shrink-0 w-1/2 pr-6"
-            animate={{ x: [0, "-100%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 60 }}
+            className="flex gap-6 shrink-0 pr-6"
+            animate={{ x: ["-100%", 0] }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 35 }}
           >
-            {topRowDuplicated.map((t, i) => (
-              <div key={`top-dup-${i}`} className="w-[300px] md:w-[400px] shrink-0 bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-colors cursor-grab">
-                <p className="font-body text-white/90 leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
+            {topRow.map((t, i) => (
+              <div key={`top-dup-${i}`} className="w-[280px] md:w-[380px] shrink-0 bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-colors">
+                <p className="font-body text-white/90 text-sm md:text-base leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
                 <div>
-                  <div className="font-semibold text-primary">{t.name}</div>
-                  <div className="text-xs text-white/50 uppercase tracking-widest mt-1">{t.role}</div>
+                  <div className="font-semibold text-primary text-sm md:text-base">{t.name}</div>
+                  <div className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest mt-1">{t.role}</div>
                 </div>
               </div>
             ))}
           </motion.div>
         </div>
 
-        {/* Bottom Row: Right to Left */}
-        <div className="flex w-[200%] sm:w-[300%] md:w-[400%] lg:w-[400%]">
+        {/* Bottom Row: Right to Left (Leftwards slide) */}
+        <div className="flex w-max flex-nowrap">
           <motion.div 
-            className="flex gap-6 shrink-0 w-1/2 pr-6"
+            className="flex gap-6 shrink-0 pr-6"
             animate={{ x: [0, "-100%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 60 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 35 }}
           >
-            {bottomRowDuplicated.map((t, i) => (
-              <div key={`bot-${i}`} className="w-[300px] md:w-[400px] shrink-0 bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-colors cursor-grab">
-                <p className="font-body text-white/90 leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
+            {bottomRow.map((t, i) => (
+              <div key={`bot-${i}`} className="w-[280px] md:w-[380px] shrink-0 bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-colors">
+                <p className="font-body text-white/90 text-sm md:text-base leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
                 <div>
-                  <div className="font-semibold text-primary">{t.name}</div>
-                  <div className="text-xs text-white/50 uppercase tracking-widest mt-1">{t.role}</div>
+                  <div className="font-semibold text-primary text-sm md:text-base">{t.name}</div>
+                  <div className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest mt-1">{t.role}</div>
                 </div>
               </div>
             ))}
           </motion.div>
           <motion.div 
-            className="flex gap-6 shrink-0 w-1/2 pr-6"
+            className="flex gap-6 shrink-0 pr-6"
             animate={{ x: [0, "-100%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 60 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 35 }}
           >
-            {bottomRowDuplicated.map((t, i) => (
-              <div key={`bot-dup-${i}`} className="w-[300px] md:w-[400px] shrink-0 bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-colors cursor-grab">
-                <p className="font-body text-white/90 leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
+            {bottomRow.map((t, i) => (
+              <div key={`bot-dup-${i}`} className="w-[280px] md:w-[380px] shrink-0 bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:bg-white/10 transition-colors">
+                <p className="font-body text-white/90 text-sm md:text-base leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
                 <div>
-                  <div className="font-semibold text-primary">{t.name}</div>
-                  <div className="text-xs text-white/50 uppercase tracking-widest mt-1">{t.role}</div>
+                  <div className="font-semibold text-primary text-sm md:text-base">{t.name}</div>
+                  <div className="text-[10px] md:text-xs text-white/50 uppercase tracking-widest mt-1">{t.role}</div>
                 </div>
               </div>
             ))}
