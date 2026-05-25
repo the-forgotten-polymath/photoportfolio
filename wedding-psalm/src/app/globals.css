@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #C9540A;
+  --color-primary-dark: #A8420A;
+  --color-text-dark: #1A1A1A;
+  --color-text-gray: #6B6B6B;
+  --color-text-light: #9A9A9A;
+  --color-bg-light: #FAF8F5;
+  --color-bg-card: #F4F1ED;
+  --color-bg-dark: #1C1C1C;
+  --color-border-color: #E8E4DF;
+
+  --font-display: var(--font-display), sans-serif;
+  --font-heading: var(--font-heading), serif;
+  --font-body: var(--font-body), sans-serif;
+  
+
+}
+
+body {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  font-family: var(--font-body);
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(201, 84, 10, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(201, 84, 10, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(201, 84, 10, 0); }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s infinite;
+}
