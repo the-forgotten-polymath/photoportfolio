@@ -11,7 +11,7 @@ export default function Navbar() {
           <Link href="#home" className="text-sm font-medium text-text-dark hover:text-primary transition-colors">Home</Link>
           <Link href="#about" className="text-sm font-medium text-text-dark hover:text-primary transition-colors">About Us</Link>
           <Link href="#portfolio" className="text-sm font-medium text-text-dark hover:text-primary transition-colors">Projects</Link>
-          <Link href="#blogs" className="text-sm font-medium text-text-dark hover:text-primary transition-colors">Blogs</Link>
+          <Link href="#gallery" className="text-sm font-medium text-text-dark hover:text-primary transition-colors">Gallery</Link>
           <Link href="#contact" className="text-sm font-medium text-text-dark hover:text-primary transition-colors">Contact Us</Link>
         </div>
         <Link href="#contact" className="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-white rounded-lg text-sm font-semibold hover:opacity-90 hover:scale-105 transition-all">
